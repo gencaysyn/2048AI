@@ -408,11 +408,12 @@ def game():
             print("Distance of Equals:", dist_equals(table))
             print("Distance of all: ", dist_all(table))
             print(table)
-
+    print("Score:", sum(sum(table)))
 
 def train():
     table = create_table(4)
     print(table)
+
     while not is_end(table):
         way = best_way(table.copy(), 0)
         i = 1
@@ -424,12 +425,14 @@ def train():
         move(table, way)
         print("Empty Boxes:", empty_box(table))
         print("Sum of Boxes:", sum_box(table))
-        print("Distance Center:", dist_center(table))
+        print("Distance to Center:", dist_center(table))
         print("Distance of Equals:", dist_equals(table))
         print("Distance of all: ", dist_all(table))
+        print("Distance to edge: ", dist_edge(table))
         print(way)
         print(table)
 
+    print("Score:",sum(sum(table)))
 
-train()
-# game()
+#train()
+game()
