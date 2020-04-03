@@ -1,5 +1,5 @@
 # 2048AI
 -Require
---import numpy as np
+--import numpy
 --import random
 --import msvcrt
